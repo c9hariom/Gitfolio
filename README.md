@@ -2,6 +2,10 @@
 
 Static, dependency-free portfolio designed for GitHub Pages.
 
+## Visual update
+
+The hero portrait uses the supplied enhanced studio image at `assets/hariom-ai-lab-portrait.png`. The page also includes animated employer/project logo nodes and company-context cards for The Economist Group, PwC, Nokia, HCLTech, Eli Lilly, PepsiCo and Planalytics.
+
 ## Files
 
 - `index.html` — page structure and content
@@ -42,4 +46,10 @@ Update the content directly in `index.html`.
 ## Notes
 
 The career/recognition content is based on the supplied professional material and public blog information available when this portfolio was generated. Project descriptions are intentionally high-level to avoid exposing confidential client details.
-"# Gitfolio" 
+
+
+## Visual assets
+
+`assets/hariom-ai-lab-portrait.png` is the portfolio portrait prepared for the AI-lab visual treatment.
+
+The site also uses Simple Icons CDN assets for recognizable brand marks. If you prefer a fully self-contained site, download those SVGs into `assets/logos/` and replace the CDN URLs in `index.html`.
