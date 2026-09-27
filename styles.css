@@ -683,3 +683,14 @@ canvas {
     max-width: calc(100vw - 82px);
   }
 }
+
+
+/* --- MOBILE HERO SIDE PADDING --- */
+@media (max-width: 620px) {
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
