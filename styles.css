@@ -549,6 +549,8 @@ canvas {
     max-width: calc(100% - 16px);
     left: auto;
     right: 8px !important;
+    top: auto !important;
+    bottom: 7% !important;
   }
 
   .stack-card {
