@@ -146,6 +146,10 @@
   object-fit: cover;
 }
 
+.pwc-mark {
+  background: #fff;
+}
+
 .pwc-mark img {
   padding: 4px;
 }
