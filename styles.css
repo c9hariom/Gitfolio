@@ -336,3 +336,152 @@
     width: 185px;
   }
 }
+
+
+/* --- MOBILE OVERFLOW / RESPONSIVE HARDENING --- */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.hero,
+.section,
+.nav,
+.footer,
+.brand-strip-inner {
+  max-width: 100%;
+}
+
+.hero-visual {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.floating-card {
+  max-width: calc(100% - 24px);
+}
+
+.brand-strip {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.brand-strip-track {
+  max-width: 100%;
+}
+
+@media (max-width: 620px) {
+  .hero-visual {
+    height: 420px;
+    min-height: 0;
+  }
+
+  .portrait-frame {
+    width: min(250px, 72vw);
+    height: min(355px, 102vw);
+  }
+
+  .portrait-ring.ring-one {
+    width: 390px;
+    height: 390px;
+  }
+
+  .portrait-ring.ring-two {
+    width: 300px;
+    height: 300px;
+  }
+
+  .portrait-ring.ring-three {
+    width: 430px;
+    height: 180px;
+  }
+
+  .hero-visual:before {
+    width: 360px;
+    height: 360px;
+  }
+
+  .holo-grid {
+    inset: 5%;
+    background-size: 24px 24px;
+  }
+
+  .ai-lab-card {
+    top: 3%;
+    left: 8px;
+    padding: 9px 10px;
+  }
+
+  .ai-lab-copy b {
+    font-size: 10px;
+  }
+
+  .ai-lab-copy span,
+  .ai-lab-copy small {
+    font-size: 7px;
+  }
+
+  .signal-card {
+    right: 8px;
+    bottom: 7%;
+    padding: 8px 10px;
+  }
+
+  .stack-card {
+    left: 8px;
+    bottom: 2%;
+    padding: 8px 10px;
+  }
+
+  .brand-strip-track {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .brand-strip-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project,
+  .current-card,
+  .contact-panel,
+  .architecture-grid,
+  .awards-grid {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .project-body,
+  .current-left,
+  .current-right {
+    min-width: 0;
+  }
+
+  .project h3,
+  .current-left h3,
+  .contact-panel h2 {
+    overflow-wrap: anywhere;
+  }
+
+  .contact-panel {
+    padding: 36px 24px;
+  }
+
+  .timeline article,
+  .arch-card,
+  .award-card {
+    min-width: 0;
+  }
+}
