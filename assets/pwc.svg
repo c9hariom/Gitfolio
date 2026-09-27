@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="PwC">
+  <g>
+    <path fill="#E86A20" d="M118 184h270a6 6 0 0 1 6 6v22a6 6 0 0 1-6 6H118a6 6 0 0 1-6-6v-22a6 6 0 0 1 6-6Z"/>
+    <path fill="#F07B18" d="M176 64h130a6 6 0 0 1 6 6v120H176V64Z"/>
+    <path fill="#F89A22" d="M185 72h114v64H185V72Z"/>
+    <path fill="#F5C43D" d="M300 105h69a6 6 0 0 1 6 6v79h-75v-85Z"/>
+    <path fill="#D95D70" d="M306 175h84v43h-84v-43Z"/>
+    <text x="256" y="350" text-anchor="middle" fill="#05070A" font-family="Georgia, 'Times New Roman', serif" font-size="126" font-weight="700">pwc</text>
+  </g>
+</svg>
