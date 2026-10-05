@@ -6,6 +6,16 @@ Static, dependency-free portfolio designed for GitHub Pages.
 
 The hero portrait uses the supplied enhanced studio image at `assets/hariom-ai-lab-portrait.png`. The page also includes animated employer/project logo nodes and company-context cards for The Economist Group, PwC, Nokia, HCLTech, Eli Lilly, PepsiCo and Planalytics.
 
+## Futuristic / cyber layer
+
+- Boot sequence (once per browser session, click or any key to skip; auto-hides if JS fails)
+- Mouse-reactive neural-network background with travelling data packets
+- Decrypt/scramble section headings, glitch hero text, typed terminal line
+- 3D tilt + glare cards, magnetic buttons, cursor reticle, HUD frame, scroll progress
+- Animated data links on the systems map and architecture diagram
+- Security section (SOC/SIEM, vuln mgmt & AppSec, cloud & AI security) with radar and an illustrative SOC event stream
+- All motion respects `prefers-reduced-motion`
+
 ## Files
 
 - `index.html` — page structure and content
