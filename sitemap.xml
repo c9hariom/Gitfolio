@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://c9hariom.com/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <image:image>
+      <image:loc>https://c9hariom.com/assets/hariom-ai-lab-portrait.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://c9hariom.com/assets/og-card.jpg</image:loc>
+    </image:image>
+  </url>
+</urlset>
