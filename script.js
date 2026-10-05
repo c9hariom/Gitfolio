@@ -92,27 +92,49 @@
   /* ---------------------------------------------------------
      3. Decrypt / scramble text
      --------------------------------------------------------- */
-  const GLYPHS = "!<>-_\\/[]{}=+*^?#01ABCDEFX§¥$%";
-  function decrypt(el) {
-    if (reduceMotion || el.dataset.done) return;
-    el.dataset.done = "1";
+  /* Layout-stable: the real characters stay in place (transparent) and the
+     scrambled glyph is painted on top as an absolutely positioned overlay,
+     so line width / wrapping never changes while the effect runs. */
+  const GLYPHS = "<>/\\[]{}=+*#01ABCDEFXZ$%";
+  function scramble(el, { dur = 900, glyphRate = 55, keepClass = false } = {}) {
+    if (reduceMotion || el.dataset.scrambling) return;
     const target = el.dataset.text || el.textContent;
-    const len = target.length;
-    const start = performance.now();
-    const dur = Math.min(1400, 450 + len * 35);
+    el.dataset.scrambling = "1";
     el.setAttribute("aria-label", target);
+    el.textContent = "";
+    const chars = [];
+    for (const ch of target) {
+      const s = document.createElement("span");
+      s.textContent = ch;
+      s.setAttribute("aria-hidden", "true");
+      if (ch.trim()) { s.className = "ch enc"; chars.push(s); }
+      el.appendChild(s);
+    }
+    const n = chars.length;
+    chars.forEach((s, i) => { s._at = (i / n) * dur * 0.65 + Math.random() * dur * 0.35; });
+    const start = performance.now();
+    let lastGlyph = 0;
     (function tick(now) {
-      const t = Math.min(1, (now - start) / dur);
-      const revealed = Math.floor(t * len);
-      let out = "";
-      for (let i = 0; i < len; i++) {
-        const ch = target[i];
-        out += i < revealed || ch === " " ? ch : GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      const t = now - start;
+      const swap = now - lastGlyph > glyphRate;
+      if (swap) lastGlyph = now;
+      let pending = 0;
+      for (const s of chars) {
+        if (!s._done && t >= s._at) { s._done = true; s.classList.remove("enc"); s.classList.add("dec"); }
+        else if (!s._done) { pending++; if (swap) s.dataset.g = GLYPHS[(Math.random() * GLYPHS.length) | 0]; }
       }
-      el.textContent = out;
-      if (t < 1) requestAnimationFrame(tick);
-      else el.textContent = target;
+      if (pending) requestAnimationFrame(tick);
+      else setTimeout(() => {
+        el.textContent = target;
+        delete el.dataset.scrambling;
+        if (!keepClass) el.removeAttribute("aria-label");
+      }, 260);
     })(start);
+  }
+  function decrypt(el) {
+    if (el.dataset.done) return;
+    el.dataset.done = "1";
+    scramble(el, { dur: Math.min(1300, 500 + el.textContent.length * 30) });
   }
 
   /* ---------------------------------------------------------
@@ -155,7 +177,7 @@
 
   addEventListener("pointermove", e => {
     mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true;
-    if (glow) { glow.style.left = e.clientX + "px"; glow.style.top = e.clientY + "px"; }
+    if (glow) glow.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
     if (coords) coords.textContent =
       "X:" + String(Math.round(e.clientX)).padStart(4, "0") +
       " Y:" + String(Math.round(e.clientY + scrollY)).padStart(4, "0");
@@ -211,6 +233,21 @@
       btn.addEventListener("pointerleave", () => { btn.style.transform = ""; });
     });
   }
+
+  /* ---------------------------------------------------------
+     6b. Hover scramble (nav + project titles) and staggered children
+     --------------------------------------------------------- */
+  if (finePointer && !reduceMotion) {
+    $$(".nav nav a").forEach(a => a.addEventListener("pointerenter", () => scramble(a, { dur: 380, glyphRate: 40 })));
+    $$(".project").forEach(p => {
+      const h = $("h3", p);
+      if (h) p.addEventListener("pointerenter", () => scramble(h, { dur: 520, glyphRate: 45 }));
+    });
+  }
+  $$(".stack-cloud, .current-right, .sec-principles, .timeline, .sec-tags, .role-tags").forEach(box => {
+    box.setAttribute("data-stagger", "");
+    Array.from(box.children).forEach((c, i) => c.style.setProperty("--i", i));
+  });
 
   /* ---------------------------------------------------------
      7. Scroll progress + active nav
@@ -289,16 +326,17 @@
       () => [`<span class=in>[AGENT]</span> triage summary posted to on-call · MTTR ↓`, "ok"],
       () => [`<span class=ok>[DEP]</span> sca scan · 0 critical · 2 low · SBOM signed`, "ok"]
     ];
-    const lines = [];
     let idx = 0, running = false;
     const stamp = (ago = 0) => new Date(Date.now() - ago * 1000).toISOString().slice(11, 19);
-    function push(ago) {
+    function push(ago, animate = true) {
       const [msg] = events[idx++ % events.length]();
-      lines.push(`<span class=t>${stamp(ago)}</span> ${msg}`);
-      if (lines.length > 14) lines.shift();
-      feed.innerHTML = lines.join("\n");
+      const ln = document.createElement("div");
+      ln.className = "ln" + (animate ? " new" : "");
+      ln.innerHTML = `<span class=t>${stamp(ago)}</span> ${msg}`;
+      feed.appendChild(ln);
+      while (feed.children.length > 18) feed.firstElementChild.remove();
     }
-    for (let i = 6; i > 0; i--) push(i * 3 + Math.round(rand(0, 2)));
+    for (let i = 8; i > 0; i--) push(i * 3 + Math.round(rand(0, 2)), false);
     const feedIO = new IntersectionObserver(([e]) => {
       if (e.isIntersecting && !running && !reduceMotion) {
         running = true;
