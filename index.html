@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hariom Singh | Full Stack AI & Cyber Security Engineer</title>
   <meta name="description" content="Hariom Singh (C9Hariom) — Full Stack AI & Cyber Security Engineer at The Economist Group AI Lab. Agentic AI, RAG, real-time voice, cloud, SIEM and AppSec.">
   <meta name="author" content="Hariom Singh">
-  <meta name="keywords" content="Hariom Singh, C9Hariom, Full Stack AI Engineer, Cyber Security Engineer, AI Engineer, The Economist Group AI Lab, Agentic AI, LangGraph, RAG, Real-time voice AI, FastAPI, React, Next.js, AWS, Azure, SIEM, ELK, Vulnerability Management, AppSec, LLM Security, Prompt Injection">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://c9hariom.com/">
   <meta name="theme-color" content="#070b12">
@@ -25,7 +25,7 @@
   <meta property="og:locale" content="en_GB">
   <meta property="og:url" content="https://c9hariom.com/">
   <meta property="og:title" content="Hariom Singh — Full Stack AI & Cyber Security Engineer">
-  <meta property="og:description" content="AI Lab engineer at The Economist Group. Agentic AI, RAG, real-time voice, full-stack product engineering, cloud architecture and cyber security (SIEM, AppSec, LLM security).">
+  <meta property="og:description" content="AI Lab engineer at The Economist Group. Agentic AI, RAG, real-time voice, full-stack engineering, cloud and cyber security (SIEM, AppSec, LLM security).">
   <meta property="og:image" content="https://c9hariom.com/assets/og-card.jpg">
   <meta property="og:image:secure_url" content="https://c9hariom.com/assets/og-card.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -72,8 +72,7 @@
         "isPartOf": { "@id": "https://c9hariom.com/#website" },
         "about": { "@id": "https://c9hariom.com/#person" },
         "mainEntity": { "@id": "https://c9hariom.com/#person" },
-        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://c9hariom.com/assets/og-card.jpg", "width": 1200, "height": 630 },
-        "dateModified": "2026-10-05"
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://c9hariom.com/assets/og-card.jpg", "width": 1200, "height": 630 }
       },
       {
         "@type": "Person",
@@ -85,7 +84,7 @@
         "url": "https://c9hariom.com/",
         "image": {
           "@type": "ImageObject",
-          "url": "https://c9hariom.com/assets/hariom-ai-lab-portrait.png",
+          "url": "https://c9hariom.com/assets/hariom-ai-lab-portrait.jpg",
           "width": 744,
           "height": 1034,
           "caption": "Hariom Singh"
@@ -128,11 +127,19 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" type="image/webp" href="assets/hariom-ai-lab-portrait-500.webp" imagesrcset="assets/hariom-ai-lab-portrait-500.webp 500w, assets/hariom-ai-lab-portrait-900.webp 900w" imagesizes="(max-width: 620px) 245px, 350px" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
-  <noscript><style>.boot{display:none}.reveal{opacity:1;transform:none;filter:none}</style></noscript>
+  <noscript><style>
+    .boot{display:none}
+    .reveal{opacity:1;transform:none;filter:none}
+    .mobile-menu-toggle{display:none!important}
+    .nav nav{display:flex!important;flex-wrap:wrap;justify-content:flex-end;gap:18px}
+    .nav-menu{position:static!important;opacity:1!important;visibility:visible!important;transform:none!important;width:auto!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;flex-direction:row!important;gap:16px!important}
+  </style></noscript>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="boot" id="boot" aria-hidden="true">
     <div class="boot-inner">
       <div class="boot-logo">C9</div>
@@ -156,7 +163,7 @@
   </div>
 
   <header class="nav">
-    <a class="brand" href="#top" aria-label="Hariom home">
+    <a class="brand" href="#main-content">
       <span class="brand-mark">C9</span>
       <span>C9HARIOM<span class="muted">.COM</span></span>
     </a>
@@ -173,125 +180,14 @@
         <a href="#systems">Systems</a>
         <a href="#security">Security</a>
         <a href="#awards">Recognition</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a class="nav-pill" href="mailto:c9hariom@gmail.com">Let's build <span>↗</span></a>
     </div>
   </header>
 
-  <style>
-    /* Mobile navigation */
-    .mobile-menu-toggle {
-      display: none;
-      width: 35px;
-      height: 35px;
-      padding: 9px;
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgb(91 233 191);
-      cursor: pointer;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 5px;
-      z-index: 1001;
-      -webkit-tap-highlight-color: transparent;
-    }
 
-    .mobile-menu-toggle span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      border-radius: 2px;
-      background: currentColor;
-      transition: transform .22s ease, opacity .22s ease;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    @media (max-width: 760px) {
-      .nav {
-        position: relative;
-        z-index: 1000;
-      }
-
-      .mobile-menu-toggle {
-        display: flex;
-        flex-shrink: 0;
-      }
-
-      .nav-menu {
-        position: absolute;
-        top: calc(100% + 10px);
-        right: 0;
-        width: min(280px, calc(100vw - 32px));
-        padding: 14px;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-        background: rgba(7, 11, 18, .96);
-        border: 1px solid rgba(255,255,255,.13);
-        border-radius: 14px;
-        box-shadow: 0 18px 50px rgba(0,0,0,.38);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-8px) scale(.98);
-        transform-origin: top right;
-        transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
-      }
-
-      .nav-menu.is-open {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0) scale(1);
-      }
-
-      .nav-menu nav {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-      }
-
-      .nav-menu nav a {
-        display: flex;
-        align-items: center;
-        min-height: 44px;
-        padding: 0 12px;
-        border-radius: 9px;
-      }
-
-      .nav-menu nav a:hover,
-      .nav-menu nav a:focus-visible {
-        background: rgba(255,255,255,.06);
-      }
-
-      .nav-menu .nav-pill {
-        width: 100%;
-        justify-content: center;
-        margin-top: 4px;
-        box-sizing: border-box;
-      }
-
-      .mobile-menu-toggle.is-open span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-
-      .mobile-menu-toggle.is-open span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .mobile-menu-toggle.is-open span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-      }
-    }
-  </style>
-
-  <main id="top">
+  <main id="main-content" tabindex="-1">
     <section class="hero section">
       <div class="hero-copy reveal">
         <div class="eyebrow"><span class="pulse"></span> THE ECONOMIST GROUP · AI LAB · FULL STACK AI & SECURITY ENGINEER</div>
@@ -304,7 +200,7 @@
         </p>
         <div class="hero-actions">
           <a class="button primary magnetic" href="#work">Explore my work <span>↓</span></a>
-          <a class="button ghost magnetic" href="https://blog.c9hariom.com/" target="_blank" rel="noreferrer">Read my blog <span>↗</span></a>
+          <a class="button ghost magnetic" href="#contact">Start a conversation <span>↘</span></a>
         </div>
         <div class="hero-proof">
           <span><b data-count="5">5</b><b>+</b> years engineering</span>
@@ -313,7 +209,7 @@
         </div>
       </div>
 
-      <div class="hero-visual reveal" aria-label="Hariom Singh">
+      <div class="hero-visual reveal" role="img" aria-label="Hariom Singh, Full Stack AI and Cyber Security Engineer">
         <div class="holo-grid"></div>
         <div class="portrait-ring ring-one"></div>
         <div class="portrait-ring ring-two"></div>
@@ -327,34 +223,37 @@
           <div class="scanline"></div>
           <div class="portrait-mesh"></div>
           <div class="portrait-id">ID · VERIFIED <span>●</span></div>
-          <img src="assets/hariom-ai-lab-portrait.png" alt="Portrait of Hariom Singh, Full Stack AI and Cyber Security Engineer" width="744" height="1034" fetchpriority="high" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="assets/hariom-ai-lab-portrait-500.webp 500w, assets/hariom-ai-lab-portrait-900.webp 900w" sizes="(max-width: 620px) 245px, 350px">
+            <img src="assets/hariom-ai-lab-portrait.jpg" alt="Portrait of Hariom Singh, Full Stack AI and Cyber Security Engineer" width="744" height="1034" fetchpriority="high" decoding="async">
+          </picture>
           <div class="portrait-corner tl"></div><div class="portrait-corner tr"></div>
           <div class="portrait-corner bl"></div><div class="portrait-corner br"></div>
         </div>
 
-        <div class="floating-card ai-lab-card">
-          <div class="brand-icon economist-icon"><img src="assets/economist.png" alt="The Economist" width="400" height="400" decoding="async"></div>
+        <div class="floating-card ai-lab-card" aria-hidden="true">
+          <div class="brand-icon economist-icon"><img src="assets/economist.webp" alt="The Economist" width="96" height="96" decoding="async"></div>
           <div class="ai-lab-copy"><small>NOW BUILDING AT</small><b>The Economist Group</b><span>AI Lab · Full Stack AI & Security Engineer · Aug 2026</span></div>
         </div>
 
-        <div class="floating-card signal-card">
+        <div class="floating-card signal-card" aria-hidden="true">
           <span class="signal-dot"></span><div><small>SYSTEM STATUS</small><b>BUILDING · EVALUATING · SHIPPING</b></div>
         </div>
 
-        <div class="floating-card stack-card">
+        <div class="floating-card stack-card" aria-hidden="true">
           <small>ACTIVE LAYERS</small>
           <div><span>AI</span><span>INFRA</span><span>SECURITY</span></div>
         </div>
 
-        <div class="floating-card shield-card">
+        <div class="floating-card shield-card" aria-hidden="true">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
           <div><small>THREAT POSTURE</small><b>ZERO TRUST · ARMED</b></div>
         </div>
       </div>
     </section>
 
-    <section class="ticker">
-      <div class="ticker-track">
+    <section class="ticker" aria-label="Areas of focus">
+      <div class="ticker-track" aria-hidden="true">
         <span>AGENTIC AI</span><i>✦</i><span>RAG / CAG</span><i>✦</i><span>REAL-TIME VOICE</span><i>✦</i>
         <span>REACT / NEXT.JS</span><i>✦</i><span>PYTHON / FASTAPI</span><i>✦</i><span>AWS / AZURE</span><i>✦</i>
         <span>SERVERLESS ARCHITECTURE</span><i>✦</i><span>AI EVALUATION</span><i>✦</i>
@@ -364,6 +263,8 @@
         <span>SERVERLESS ARCHITECTURE</span><i>✦</i><span>AI EVALUATION</span><i>✦</i>
         <span>SIEM / DETECTION</span><i>✦</i><span>VULNERABILITY MANAGEMENT</span><i>✦</i><span>LLM SECURITY</span><i>✦</i>
       </div>
+      <p class="sr-only">Specialisms: agentic AI, RAG and CAG, real-time voice, React and Next.js, Python and FastAPI, AWS and Azure, serverless architecture, AI evaluation, SIEM and detection, vulnerability management, LLM security.</p>
+      <button class="ticker-toggle" type="button" aria-pressed="false" aria-label="Pause ticker">❚❚</button>
     </section>
 
     <section class="brand-strip">
@@ -371,29 +272,29 @@
         <div class="brand-strip-heading">
           <span class="section-no">WORK / CONTEXT</span>
           <div>
-            <h3>Selected professional experience</h3>
+            <h2>Selected professional experience</h2>
             <p>Companies and project contexts represented below.</p>
           </div>
         </div>
         <div class="brand-strip-track">
           <div class="brand-logo-card">
-            <div class="brand-logo-mark economist-mark"><img src="assets/economist.png" alt="The Economist" width="400" height="400" loading="lazy" decoding="async"></div>
+            <div class="brand-logo-mark economist-mark"><img src="assets/economist.webp" alt="The Economist" width="96" height="96" loading="lazy" decoding="async"></div>
             <div><strong>The Economist Group</strong><span>AI Lab · Full Stack AI & Security Engineer · Aug 2026</span></div>
           </div>
           <div class="brand-logo-card">
-            <div class="brand-logo-mark pwc-mark"><img src="assets/pwc.png" alt="PwC" width="512" height="389" loading="lazy" decoding="async"></div>
+            <div class="brand-logo-mark pwc-mark"><img src="assets/pwc.webp" alt="PwC" width="112" height="85" loading="lazy" decoding="async"></div>
             <div><strong>PwC</strong><span>Senior Associate · AI & Security</span></div>
           </div>
           <div class="brand-logo-card">
-            <div class="brand-logo-mark nokia-mark"><img src="assets/nokia.png" alt="Nokia" width="1200" height="628" loading="lazy" decoding="async"></div>
+            <div class="brand-logo-mark nokia-mark"><img src="assets/nokia.webp" alt="Nokia" width="192" height="100" loading="lazy" decoding="async"></div>
             <div><strong>Nokia</strong><span>Security · Automation</span></div>
           </div>
           <div class="brand-logo-card">
-            <div class="brand-logo-mark hcl-mark"><img src="assets/hcltech.png" alt="HCLTech" width="400" height="400" loading="lazy" decoding="async"></div>
+            <div class="brand-logo-mark hcl-mark"><img src="assets/hcltech.webp" alt="HCLTech" width="96" height="96" loading="lazy" decoding="async"></div>
             <div><strong>HCLTech</strong><span>Engineering · Security</span></div>
           </div>
           <div class="brand-logo-card">
-            <div class="brand-logo-mark lilly-mark"><img src="assets/lilly.png" alt="Eli Lilly" width="1024" height="1024" loading="lazy" decoding="async"></div>
+            <div class="brand-logo-mark lilly-mark"><img src="assets/lilly.webp" alt="Eli Lilly" width="104" height="104" loading="lazy" decoding="async"></div>
             <div><strong>Eli Lilly</strong><span>Medical AI · Voice</span></div>
           </div>
         </div>
@@ -524,7 +425,7 @@
       <div class="sec-grid">
         <article class="sec-card reveal" data-tilt>
           <div class="sec-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
           </div>
           <span class="card-index">S / 01</span>
           <h3>SOC, SIEM &amp; detection</h3>
@@ -534,7 +435,7 @@
         </article>
         <article class="sec-card reveal" data-tilt>
           <div class="sec-icon">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/><path d="M11 8v3l2 2"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/><path d="M11 8v3l2 2"/></svg>
           </div>
           <span class="card-index">S / 02</span>
           <h3>Vulnerability management &amp; AppSec</h3>
@@ -544,7 +445,7 @@
         </article>
         <article class="sec-card reveal" data-tilt>
           <div class="sec-icon">
-            <svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9Z"/><rect x="10" y="12" width="4" height="3.5" rx=".6"/><path d="M10.8 12v-1a1.2 1.2 0 0 1 2.4 0v1"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9Z"/><rect x="10" y="12" width="4" height="3.5" rx=".6"/><path d="M10.8 12v-1a1.2 1.2 0 0 1 2.4 0v1"/></svg>
           </div>
           <span class="card-index">S / 03</span>
           <h3>Cloud &amp; AI security</h3>
@@ -570,7 +471,7 @@
       </div>
 
       <div class="medical-callout reveal">
-        <div class="medical-logo"><img src="assets/lilly.png" alt="Eli Lilly" width="1024" height="1024" loading="lazy" decoding="async"></div>
+        <div class="medical-logo"><img src="assets/lilly.webp" alt="Eli Lilly" width="104" height="104" loading="lazy" decoding="async"></div>
         <div><span>FEATURED AI EXPERIENCE</span><h3>Real-time Medical AI Representative</h3><p>Voice + chat, grounded knowledge, agentic actions, low-latency streaming and safety-aware escalation — built as a full product experience rather than a demo.</p></div>
         <div class="medical-pulse"><i></i><i></i><i></i></div>
       </div>
@@ -578,22 +479,22 @@
         <article class="project reveal">
           <div class="project-number">01</div>
           <div class="project-body">
-            <div class="project-top"><span class="project-company"><img src="assets/lilly.png" alt="" width="1024" height="1024" loading="lazy" decoding="async"> ELI LILLY · ENTERPRISE AI</span><span>REAL-TIME / VOICE</span></div>
+            <div class="project-top"><span class="project-company"><img src="assets/lilly.webp" alt="" width="104" height="104" loading="lazy" decoding="async"> ELI LILLY · ENTERPRISE AI</span><span>REAL-TIME / VOICE</span></div>
             <h3>Isabella · Medical AI Representative</h3>
             <p>Built real-time voice + chat capabilities for an enterprise medical AI representative for Eli Lilly, combining grounded medical knowledge, agentic workflows, streaming and secure escalation paths.</p>
             <div class="project-stack">Eli Lilly · OpenAI Realtime · Python · FastAPI · React · WebSockets · RAG</div>
           </div>
-          <div class="project-arrow">↗</div>
+          <div class="project-note">DETAILS<br>ON REQUEST</div>
         </article>
         <article class="project reveal">
           <div class="project-number">02</div>
           <div class="project-body">
             <div class="project-top"><span class="project-company">SUPPLY CHAIN AI</span><span>RAG / ANALYTICS</span></div>
             <h3>SAM · Supply Chain Risk AI</h3>
-            <p>Built enterprise AI experiences for supply-chain risk analysis, combining grounded retrieval, conversational UX, real-time streaming and analytics for a enterprise/Planalytics context.</p>
+            <p>Built enterprise AI experiences for supply-chain risk analysis, combining grounded retrieval, conversational UX, real-time streaming and analytics in an enterprise/Planalytics context.</p>
             <div class="project-stack">Planalytics · RAG · React/Next.js · Power BI · Cloud</div>
           </div>
-          <div class="project-arrow">↗</div>
+          <div class="project-note">DETAILS<br>ON REQUEST</div>
         </article>
         <article class="project reveal">
           <div class="project-number">03</div>
@@ -603,9 +504,10 @@
             <p>End-to-end analytics experience translating meteorological and sales data into interactive insights and AI-assisted decision support.</p>
             <div class="project-stack">React · Next.js · AI · Power BI · APIs · Cloud</div>
           </div>
-          <div class="project-arrow">↗</div>
+          <div class="project-note">DETAILS<br>ON REQUEST</div>
         </article>
       </div>
+      <p class="project-cta"><a href="mailto:c9hariom@gmail.com?subject=Question%20about%20your%20engineering%20work">Ask about this work <span>↗</span></a></p>
     </section>
 
     <section id="awards" class="section awards-section">
@@ -640,7 +542,6 @@
         <span class="section-kicker">SERVERLESS · EVENT-DRIVEN · AI-NATIVE</span>
       </div>
       <div class="architecture-visual reveal" data-links=".arch-center" data-nodes=".arch-pod">
-        <div class="arch-line l1"></div><div class="arch-line l2"></div><div class="arch-line l3"></div>
         <div class="arch-pod p1"><b>EVENT</b><span>queue / webhook / stream</span></div>
         <div class="arch-pod p2"><b>COMPUTE</b><span>serverless / containers / APIs</span></div>
         <div class="arch-pod p3"><b>INTELLIGENCE</b><span>LLM / agent / retrieval</span></div>
@@ -673,7 +574,7 @@
         <span class="sec">IAM</span><span class="sec">SAST / SCA</span><span class="sec">LLM Guardrails</span><span class="sec">Zero Trust</span>
       </div>
     </section>
-<section class="section contact-section">
+<section id="contact" class="section contact-section">
       <div class="contact-panel reveal">
         <div>
           <span class="eyebrow">OPEN CHANNEL</span>
@@ -705,43 +606,9 @@
   <footer class="footer">
     <span>© 2026 HARIOM SINGH</span>
     <span>BUILT FOR THE WEB · RUNS ON GITHUB PAGES</span>
-    <a href="#top">BACK TO TOP ↑</a>
+    <a href="#main-content">BACK TO TOP ↑</a>
   </footer>
 
-  <script>
-    // Mobile navigation
-    (() => {
-      const toggle = document.querySelector('.mobile-menu-toggle');
-      const menu = document.querySelector('#mobile-nav');
-      if (!toggle || !menu) return;
-
-      const closeMenu = () => {
-        menu.classList.remove('is-open');
-        toggle.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      };
-
-      toggle.addEventListener('click', () => {
-        const open = menu.classList.toggle('is-open');
-        toggle.classList.toggle('is-open', open);
-        toggle.setAttribute('aria-expanded', String(open));
-      });
-
-      menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', closeMenu);
-      });
-
-      document.addEventListener('click', event => {
-        if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-          closeMenu();
-        }
-      });
-
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 760) closeMenu();
-      });
-    })();
-  </script>
 
   <script src="script.js"></script>
   <!-- Google tag (gtag.js) -->
